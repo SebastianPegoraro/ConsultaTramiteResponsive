@@ -1,0 +1,10 @@
+.masterHead {
+   background: linear-gradient(-90deg, #003F58, #0089CB);
+}
+
+.headerCenter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 152px;
+  width: auto;
+}
