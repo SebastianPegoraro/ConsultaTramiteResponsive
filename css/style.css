@@ -8,3 +8,20 @@
   height: 152px;
   width: auto;
 }
+
+.tittle {
+  color: #fff;
+  margin-top: 40px;
+}
+
+.regular {
+    font-weight: normal;
+    font-style: normal;
+}
+
+#logoChaco {
+  height: 100px;
+  width: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
