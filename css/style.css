@@ -1,3 +1,10 @@
+html{
+  background-image: url('../img/fondo-horizontal.jpg');
+  background-repeat: repeat-y;
+  min-height: 100%;
+  background-size: contain;
+}
+
 .masterHead {
    background: linear-gradient(-90deg, #003F58, #0089CB);
 }
@@ -24,4 +31,8 @@
   width: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#logoSGT {
+  display: none;
 }
