@@ -10,15 +10,16 @@ html{
 }
 
 .headerCenter {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   height: 152px;
   width: auto;
 }
 
 .tittle {
   color: #fff;
-  margin-top: 40px;
+  font-size: 13px;
+  margin-top: 12px;
 }
 
 .regular {
@@ -27,12 +28,20 @@ html{
 }
 
 #logoChaco {
-  height: 100px;
+  height: 30px;
   width: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #logoSGT {
   display: none;
+}
+
+.title-card {
+  font-size: 13px;
+}
+
+.title-description {
+  font-size: 12px;
 }

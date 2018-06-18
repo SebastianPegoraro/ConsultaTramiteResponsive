@@ -2,19 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta Trámite</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="masterHead">
-      <div class="row">
-        <div class="col-md-7 offset-sm-1">
-          <img src="img/logo-sgt.png" alt="" id="logoSGT">
-          <h2 class="tittle regular">SISTEMA DE GESTIÓN DE TRÁMITE</h2>
-        </div>
-        <div class="col-md-4">
-          <img src="img/logo-chaco.png" alt="" id="logoChaco">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 col-md-8">
+            <img src="img/logo-sgt.png" alt="" id="logoSGT">
+            <h6 class="tittle regular">SISTEMA DE GESTIÓN DE TRÁMITE</h6>
+          </div>
+          <div class="col-4 col-md-3 text-right">
+            <img src="img/logo-chaco.png" class="" alt="" id="logoChaco">
+          </div>
         </div>
       </div>
     </header>
@@ -23,12 +27,12 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <div id="accordion">
+            <div id="accordion" class="text-center">
               <div class="card">
-                <div class="card-header text-center" id="headingOne">
+                <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <h1><u>Consulta por Número de Trámite:</u></h1> <h4>Muestra un único Expediente o Actuación. Ej: 2-2018-917-A</h4>
+                      <h5 class="title-card"><u>Consulta por Número de Trámite:</u></h5>
                     </button>
                   </h5>
                 </div>
@@ -36,12 +40,40 @@
                   <div class="card-body">
                     <div class="container">
                       <div class="row">
-                        <form class="" action="index.html" method="post">
-                          <div class="form-group">
-                            <label for=""> Número: </label>
-                            
-                          </div>
-                        </form>
+                        <div class="col">
+                          <h6 class="title-description">Muestra un único Expediente o Actuación. Ej: 2-2018-917-A</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <span> Número: </span>
+                        </div>
+                        <div class="col-3">
+                          <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Jur</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                        <div class="col-3">
+                          <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Año</option>
+                            <option value="1">2018</option>
+                            <option value="2">2017</option>
+                            <option value="3">2016</option>
+                          </select>
+                        </div>
+                        <div class="col-3">
+                          <input type="text" class="form-control" id="inputPassword" placeholder="Número">
+                        </div>
+                        <div class="col-3">
+                          <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Tipo</option>
+                            <option value="1">A</option>
+                            <option value="2">E</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -51,13 +83,19 @@
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Collapsible Group Item #2
+                      <h5 class="title-card"><u>Consulta por N° de Identificación de Origen:</u></h5>
                     </button>
                   </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <div class="container">
+                      <div class="row">
+                        <div class="col">
+                          <h6 class="title-description">Muentra un único Expediente o Actuación, con el N° de Indentificación de Origen. Ej: 5-8123-5</h6>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -65,13 +103,19 @@
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Collapsible Group Item #3
+                      <h5 class="title-card"><u>Consulta por D.N.I.:</u></h5>
                     </button>
                   </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                   <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <div class="container">
+                      <div class="row">
+                        <div class="col">
+                          <h6 class="title-description">Muestra los trámites asociados al DNI ingresado</h6>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
