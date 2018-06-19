@@ -16,7 +16,7 @@ html{
   width: auto;
 }
 
-.tittle {
+.title {
   color: #fff;
   font-size: 13px;
   margin-top: 12px;
@@ -44,4 +44,29 @@ html{
 
 .title-description {
   font-size: 12px;
+}
+
+#contenidoNumero {
+  display: none;
+}
+
+#contenidoIdentificacion {
+  display: none;
+}
+
+#contenidoDni {
+  display: none;
+}
+
+th {
+  font-size: 14px;
+  background-color: #003F58 !important;
+}
+
+td{
+  font-size: 10px;
+}
+
+.title-table {
+    color: #003F58;
 }

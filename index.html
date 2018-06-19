@@ -14,7 +14,7 @@
         <div class="row">
           <div class="col-8 col-md-8">
             <img src="img/logo-sgt.png" alt="" id="logoSGT">
-            <h6 class="tittle regular">SISTEMA DE GESTIÓN DE TRÁMITE</h6>
+            <h6 class="title regular">SISTEMA DE GESTIÓN DE TRÁMITE</h6>
           </div>
           <div class="col-4 col-md-3 text-right">
             <img src="img/logo-chaco.png" class="" alt="" id="logoChaco">
@@ -22,7 +22,7 @@
         </div>
       </div>
     </header>
-<br><br>
+<br>
     <section>
       <div class="container">
         <div class="row">
@@ -32,7 +32,7 @@
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <h5 class="title-card"><u>Consulta por Número de Trámite:</u></h5>
+                      <h5 class="title-card"> Consulta por Número de Trámite: </h5>
                     </button>
                   </h5>
                 </div>
@@ -48,7 +48,10 @@
                         <div class="col-12">
                           <span> Número: </span>
                         </div>
-                        <div class="col-3">
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-12">
                           <select class="custom-select" id="inputGroupSelect01">
                             <option selected>Jur</option>
                             <option value="1">1</option>
@@ -56,7 +59,7 @@
                             <option value="3">3</option>
                           </select>
                         </div>
-                        <div class="col-3">
+                        <div class="col-12">
                           <select class="custom-select" id="inputGroupSelect01">
                             <option selected>Año</option>
                             <option value="1">2018</option>
@@ -64,15 +67,21 @@
                             <option value="3">2016</option>
                           </select>
                         </div>
-                        <div class="col-3">
+                        <div class="col-12">
                           <input type="text" class="form-control" id="inputPassword" placeholder="Número">
                         </div>
-                        <div class="col-3">
+                        <div class="col-12">
                           <select class="custom-select" id="inputGroupSelect01">
                             <option selected>Tipo</option>
                             <option value="1">A</option>
                             <option value="2">E</option>
                           </select>
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col text-center">
+                          <a class="btn btn-primary" href="#" role="button" id="numero" onclick="muestra(contenidoNumero, 'numero')">Consultar</a>
                         </div>
                       </div>
                     </div>
@@ -83,7 +92,7 @@
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <h5 class="title-card"><u>Consulta por N° de Identificación de Origen:</u></h5>
+                      <h5 class="title-card"> Consulta por N° de Identificación de Origen: </h5>
                     </button>
                   </h5>
                 </div>
@@ -95,6 +104,23 @@
                           <h6 class="title-description">Muentra un único Expediente o Actuación, con el N° de Indentificación de Origen. Ej: 5-8123-5</h6>
                         </div>
                       </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <label for="inputPassword" class="col-sm-2 col-form-label">N° de Identificación de Origen: </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" id="inputPassword" placeholder="Identificación de Origen">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <a class="btn btn-primary" href="#" role="button" id="identificacion" onclick="muestra(contenidoIdentificacion, 'identificacion')">Consultar</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -103,7 +129,7 @@
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <h5 class="title-card"><u>Consulta por D.N.I.:</u></h5>
+                      <h5 class="title-card"> Consulta por D.N.I.: </h5>
                     </button>
                   </h5>
                 </div>
@@ -115,12 +141,172 @@
                           <h6 class="title-description">Muestra los trámites asociados al DNI ingresado</h6>
                         </div>
                       </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <label>D.N.I.: </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" id="inputPassword" placeholder="D.N.I.">
+                        </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col">
+                          <a class="btn btn-primary" href="#" role="button" id="dni" onclick="muestra(contenidoDni, 'dni')">Consultar</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <br>
+        <!-- Tablas -->
+        <div class="row card" id="contenidoNumero">
+          <br>
+          <div class="col">
+            <h6 class="text-center title-table">Ruta de Trámite</h6>
+            <table class="table">
+              <thead class="thead-dark head-table">
+                <tr>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Ofina</th>
+                  <th scope="col">Situación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>02/01/18</td>
+                  <td>12:08</td>
+                  <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
+                  <td>Grabación del Trámite</td>
+                </tr>
+                <tr>
+                  <td>02/01/18</td>
+                  <td>12:30</td>
+                  <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
+                  <td>Pase a DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
+                </tr>
+                <tr>
+                  <td>16/01/18</td>
+                  <td>18:51</td>
+                  <td>GORNACION - DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
+                  <td>Pase a DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
+                </tr>
+                <tr>
+                  <td>09/02/18</td>
+                  <td>09:34</td>
+                  <td>GORNACION - DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
+                  <td>Se Agregaron Observaciones </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row">
+              <div class="col text-center">
+                <button type="button" name="button" class="btn btn-outline-primary"> Imprimir </button>
+              </div>
+            </div>
+            <br>
+          </div>
+        </div>
+        <div class="row shadowns" id="contenidoIdentificacion">
+          <h2 class="text-center bold title-table">Ruta de Trámite</h2>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+                <th scope="col">Ofina</th>
+                <th scope="col">Situación</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/01/18</td>
+                <td>12:08</td>
+                <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
+                <td>Grabación del Trámite</td>
+              </tr>
+              <tr>
+                <td>02/01/18</td>
+                <td>12:30</td>
+                <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
+                <td>Pase a DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
+              </tr>
+              <tr>
+                <td>16/01/18</td>
+                <td>18:51</td>
+                <td>GORNACION - DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
+                <td>Pase a DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
+              </tr>
+              <tr>
+                <td>09/02/18</td>
+                <td>09:34</td>
+                <td>GORNACION - DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
+                <td>Se Agregaron Observaciones </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col offset-md-1">
+              <button type="button" name="button" class="btn btn-outline-primary"> Imprimir </button>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="row shadowns" id="contenidoDni">
+          <h1 class="text-center bold title-table">Trámites Relacionados al DNI ...</h1>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Trámite</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Situación</th>
+                <th scope="col">Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#">E 2-2018-917-A</a></td>
+                <td>02/01/18</td>
+                <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
+                <td>Grabación del Trámite</td>
+                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                  <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
+              </tr>
+              <tr>
+                <td><a href="#">E 2-2018-7088-A</a></td>
+                <td>02/01/18</td>
+                <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
+                <td>Pase a DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
+                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                  <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
+              </tr>
+              <tr>
+                <td><a href="#">E 2-2018-7065-A</a></td>
+                <td>16/01/18</td>
+                <td>GORNACION - DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
+                <td>Pase a DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
+                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                  <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
+              </tr>
+              <tr>
+                <td><a href="#">E 2-2018-27-A</a></td>
+                <td>09/02/18</td>
+                <td>GORNACION - DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
+                <td>Se Agregaron Observaciones </td>
+                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                  <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -131,6 +317,8 @@
 
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Efecto de las consultas -->
+    <script type="text/javascript" src="js/consulta.js"></script>
 
   </body>
 </html>
