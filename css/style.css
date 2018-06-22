@@ -70,3 +70,64 @@ td{
 .title-table {
     color: #003F58;
 }
+
+.table-phone {
+  display: none;
+}
+
+.btn-consul {
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 576px) {
+  #logoChaco {
+    height: 70px;
+  }
+
+  .title{
+    font-size: 26px;
+    margin-top: 25px;
+  }
+
+  .title-card {
+    font-size: 25px;
+  }
+
+  .title-description {
+    font-size: 17px;
+  }
+
+  th{
+    font-size: 22px;
+  }
+
+  td {
+    font-size: 18px;
+  }
+
+  .btn-consul {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .table-phone {
+    display: grid;
+  }
+
+  th {
+    font-size: 15px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+
+  #logoSGT {
+    display: block;
+    height: 70px;
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

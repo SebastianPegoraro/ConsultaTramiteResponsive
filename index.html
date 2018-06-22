@@ -12,8 +12,10 @@
     <header class="masterHead">
       <div class="container">
         <div class="row">
-          <div class="col-8 col-md-8">
+          <div class="col-lg-1">
             <img src="img/logo-sgt.png" alt="" id="logoSGT">
+          </div>
+          <div class="col-8 col-md-8">
             <h6 class="title regular">SISTEMA DE GESTIÓN DE TRÁMITE</h6>
           </div>
           <div class="col-4 col-md-3 text-right">
@@ -46,33 +48,32 @@
                       </div>
                       <div class="row">
                         <div class="col-12">
-                          <span> Número: </span>
+                          <label for="">Número:</label>
                         </div>
                       </div>
-                      <br>
                       <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 col-sm-3">
                           <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Jur</option>
+                            <option selected disabled>Jur</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                           </select>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-sm-3">
                           <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Año</option>
+                            <option selected disabled>Año</option>
                             <option value="1">2018</option>
                             <option value="2">2017</option>
                             <option value="3">2016</option>
                           </select>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-sm-3">
                           <input type="text" class="form-control" id="inputPassword" placeholder="Número">
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-sm-3">
                           <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Tipo</option>
+                            <option selected disabled>Tipo</option>
                             <option value="1">A</option>
                             <option value="2">E</option>
                           </select>
@@ -105,20 +106,15 @@
                         </div>
                       </div>
                       <br>
-                      <div class="row">
-                        <div class="col">
-                          <label for="inputPassword" class="col-sm-2 col-form-label">N° de Identificación de Origen: </label>
+                      <div class="row align-items-start">
+                        <div class="col-12 col-sm-4">
+                          <label for="inputPassword" class="">N° de Identificación de Origen: </label>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-sm-4">
                           <input type="text" class="form-control" id="inputPassword" placeholder="Identificación de Origen">
                         </div>
-                      </div>
-                      <br>
-                      <div class="row">
-                        <div class="col">
-                          <a class="btn btn-primary" href="#" role="button" id="identificacion" onclick="muestra(contenidoIdentificacion, 'identificacion')">Consultar</a>
+                        <div class="col-12 col-sm-4">
+                          <a class="btn btn-primary btn-consul" href="#" role="button" id="identificacion" onclick="muestra(contenidoIdentificacion, 'identificacion')">Consultar</a>
                         </div>
                       </div>
                     </div>
@@ -142,20 +138,15 @@
                         </div>
                       </div>
                       <br>
-                      <div class="row">
-                        <div class="col">
+                      <div class="row align-items-start">
+                        <div class="col-12 col-sm-4">
                           <label>D.N.I.: </label>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
+                        <div class="col-12 col-sm-4">
                           <input type="text" class="form-control" id="inputPassword" placeholder="D.N.I.">
                         </div>
-                      </div>
-                      <br>
-                      <div class="row">
-                        <div class="col">
-                          <a class="btn btn-primary" href="#" role="button" id="dni" onclick="muestra(contenidoDni, 'dni')">Consultar</a>
+                        <div class="col-12 col-sm-4">
+                          <a class="btn btn-primary btn-consul" href="#" role="button" id="dni" onclick="muestra(contenidoDni, 'dni')">Consultar</a>
                         </div>
                       </div>
                     </div>
@@ -170,7 +161,7 @@
         <div class="row card" id="contenidoNumero">
           <br>
           <div class="col">
-            <h6 class="text-center title-table">Ruta de Trámite</h6>
+            <h2 class="text-center title-table">Ruta de Trámite</h2>
             <table class="table">
               <thead class="thead-dark head-table">
                 <tr>
@@ -215,7 +206,7 @@
             <br>
           </div>
         </div>
-        <div class="row shadowns" id="contenidoIdentificacion">
+        <div class="row card" id="contenidoIdentificacion">
           <h2 class="text-center bold title-table">Ruta de Trámite</h2>
           <table class="table">
             <thead class="thead-dark">
@@ -254,14 +245,14 @@
             </tbody>
           </table>
           <div class="row">
-            <div class="col offset-md-1">
+            <div class="col text-center">
               <button type="button" name="button" class="btn btn-outline-primary"> Imprimir </button>
             </div>
           </div>
           <br>
         </div>
-        <div class="row shadowns" id="contenidoDni">
-          <h1 class="text-center bold title-table">Trámites Relacionados al DNI ...</h1>
+        <div class="row card" id="contenidoDni">
+          <h2 class="text-center bold title-table">Trámites del DNI ...</h2>
           <table class="table">
             <thead class="thead-dark">
               <tr>
@@ -269,7 +260,7 @@
                 <th scope="col">Fecha</th>
                 <th scope="col">Ubicación</th>
                 <th scope="col">Situación</th>
-                <th scope="col">Opciones</th>
+                <th scope="col" class="table-phone">Opciones</th>
               </tr>
             </thead>
             <tbody>
@@ -278,7 +269,7 @@
                 <td>02/01/18</td>
                 <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
                 <td>Grabación del Trámite</td>
-                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                <td class="table-phone"><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
                   <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
               </tr>
               <tr>
@@ -286,7 +277,7 @@
                 <td>02/01/18</td>
                 <td>GORNACION - TECNOLOGIAS DE INFORMACIÓN</td>
                 <td>Pase a DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
-                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                <td class="table-phone"><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
                   <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
               </tr>
               <tr>
@@ -294,7 +285,7 @@
                 <td>16/01/18</td>
                 <td>GORNACION - DIRECCION UNIDAD DE RECURSOS HUMANOS</td>
                 <td>Pase a DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
-                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                <td class="table-phone"><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
                   <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
               </tr>
               <tr>
@@ -302,7 +293,7 @@
                 <td>09/02/18</td>
                 <td>GORNACION - DEPARTAMENTO CERTIFICACIONES Y LEGAJOS GOBERNACION</td>
                 <td>Se Agregaron Observaciones </td>
-                <td><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
+                <td class="table-phone"><button type="button" name="button" class="btn btn-outline-primary btn-sm"> Imprimir </button> <br>
                   <button type="button" name="button" class="btn btn-outline-info btn-sm btn-block"> Ver </button></td>
               </tr>
             </tbody>
