@@ -79,6 +79,20 @@ td{
   margin-top: 10px;
 }
 
+#foot {
+  background: linear-gradient(-90deg, #0089CB, #003F58);
+}
+
+.logos img {
+  height: 50px;
+  width: auto;
+  margin: 10px;
+}
+/* Con este código se visualiza el footer abajo */
+.content{
+  min-height: calc(79vh - 70px);
+}
+
 @media only screen and (min-width: 576px) {
   #logoChaco {
     height: 70px;
