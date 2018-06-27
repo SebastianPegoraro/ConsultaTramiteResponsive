@@ -82,7 +82,7 @@
                       <br>
                       <div class="row">
                         <div class="col text-center">
-                          <a class="btn btn-primary" href="#" role="button" id="numero" onclick="muestra(contenidoNumero, 'numero')">Consultar</a>
+                          <a class="btn btn-primary js-scroll-trigger" href="#contenidoNumero" role="button" id="numero" onclick="muestra(contenidoNumero, 'numero')">Consultar</a>
                         </div>
                       </div>
                     </div>
@@ -114,7 +114,7 @@
                           <input type="text" class="form-control" id="inputPassword" placeholder="Identificación de Origen">
                         </div>
                         <div class="col-12 col-sm-4">
-                          <a class="btn btn-primary btn-consul" href="#" role="button" id="identificacion" onclick="muestra(contenidoIdentificacion, 'identificacion')">Consultar</a>
+                          <a class="btn btn-primary btn-consul js-scroll-trigger" href="#contenidoIdentificacion" role="button" id="identificacion" onclick="muestra(contenidoIdentificacion, 'identificacion')">Consultar</a>
                         </div>
                       </div>
                     </div>
@@ -146,7 +146,7 @@
                           <input type="text" class="form-control" id="inputPassword" placeholder="D.N.I.">
                         </div>
                         <div class="col-12 col-sm-4">
-                          <a class="btn btn-primary btn-consul" href="#" role="button" id="dni" onclick="muestra(contenidoDni, 'dni')">Consultar</a>
+                          <a class="btn btn-primary btn-consul js-scroll-trigger" href="#contenidoDni" role="button" id="dni" onclick="muestra(contenidoDni, 'dni')">Consultar</a>
                         </div>
                       </div>
                     </div>
@@ -302,23 +302,24 @@
       </div>
     </section>
     
-    <section id="foot">
+    <footer id="foot">
       <div class="container">
         <div class="row logos text-center">
-          <div class="col-12">
+          <div class="col-12 col-md-6">
             <img src="img/secretaria.png" alt="">
           </div>
-          <div class="col-12">
+          <div class="col-12 col-md-6">
               <img src="img/direccion.png" alt="">
             </div>
         </div>
       </div>
-    </section>
+    </footer>
 
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- Efecto de las consultas -->
     <script type="text/javascript" src="js/consulta.js"></script>
-
+    <!-- Efecto de Scroll -->
+    <script type="text/javascript" src="js/autoScroll.js"></script>
   </body>
 </html>
