@@ -1,9 +1,12 @@
 html{
   background-image: url('../img/fondo-horizontal.jpg');
   background-repeat: repeat-y;
-  min-height: 100%;
   background-size: contain;
-  position: relative;
+  height: 100%;
+}
+
+body{
+  height: 89%;
 }
 
 .masterHead {
@@ -81,11 +84,7 @@ td{
 }
 
 #foot {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: auto; /* Set the fixed height of the footer here */
-  /* line-height: 60px; Vertically center the text there */
   background: linear-gradient(-90deg, #0089CB, #003F58);
 }
 
@@ -95,9 +94,9 @@ td{
   margin: 10px;
 }
 /* Con este código se visualiza el footer abajo */
-/* .content{
-  min-height: calc(79vh - 70px);
-} */
+.content{
+  min-height: 80%;
+}
 
 
 @media only screen and (min-width: 576px) {
@@ -133,6 +132,10 @@ td{
   .logos img{
     height: 60px;
   }
+
+  .content {
+    min-height: 92%;
+  }
 }
 
 @media only screen and (min-width: 960px) {
@@ -157,6 +160,6 @@ td{
   }
 
   .content {
-    min-height: calc(88vh - 67px);
+    min-height: 92%;
   }
 }
