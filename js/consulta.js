@@ -4,6 +4,6 @@ function muestra(element, link) {
     document.getElementById(link).innerHTML = "Consultar";
   } else {
     element.style.display = "block";
-    document.getElementById(link).innerHTML = "Ocultar";
+    document.getElementById(link).style.display = "none";
   }
 }
